@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset ="utf-8">
+    <title>회원가입 폼</title>
+    <style>
+        body {
+            background-color : #ffffe8;
+            font-family: 돋움;
+        }
+        
+        g {
+            color : brown;
+        }
+        
+        table {
+            position : relative;
+            width : 700px;
+            border-collapse: collapse;
+            border-spacing : 0;
+            border : 1px solid #333;
+        }
+        
+        td {
+            border : 1px solid #333;
+        }
+        
+        td:not(:first-child) {
+            padding-left: 3px;
+        }
+        
+        label {
+            color : coral;
+            font-size : 0.8em;
+        }
+        
+        hyp {
+            color : black;
+        }
+        
+        .basic  {
+            height : 20px;
+            background-color : #63964b;
+            color : white;
+            font-size : 0.85em;
+        }
+        
+        .additional {
+            height : 20px;
+            background-color : #a1622f;
+            color : white;
+            font-size : 0.85em;
+        }
+        
+        tr:not(.hang) {
+            height : 30px;
+            font-size : 0.9em;
+        }
+        
+        .index, .intro, .interest {
+            width : 135px;
+            font-family : 돋움체;
+            background-image : url(media/arrow.png);
+            background-repeat : no-repeat;
+            background-position : 4px 7px;
+            background-color : white;
+            text-indent : 20px;
+        }
+        
+        .intro {
+            height : 80px;
+            background-position : 4px 36px;
+        }
+        
+        .interest {
+            height : 60px;
+            background-position : 4px 34px;
+        }
+        
+        .inter p {
+            color : black;
+            width : 120px;
+            float : left;
+            line-height: 15px;
+        }
+        
+        .desc {
+            text-align: center;
+            line-height : 20px;
+            color : purple;
+        }
+        
+        .sub {
+            text-align : center;
+        }
+        
+        .sub button {
+            margin : 0 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <span class = "title">. . . . . . . . . . . .  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . [<g>회원 가입 신청서</g>]</span>
+    </header>
+    <article>
+        <table>
+            <tr class = "hang"><td class = "basic" colspan = 2><b>기본 항목</b>(필수입력사항입니다)</td></tr>
+            <tr><td class = "index">회원아이디</td><td><label><input type = "text" size = 15> ※영/숫자만으로 4-12자</label></td></tr>
+            <tr><td class = "index">비밀번호</td><td><label for = "pass"><input type = "pass" size = 15> ※영문 또는 영/숫자혼합하여 4-12자</label></td></tr>
+            <tr><td class = "index">이 름</td><td><label><input type = "text" size = 15> ※한글 실명을 입력하여 주세요.</label></td></tr>
+            <tr><td class = "index">주민등록번호</td><td><label><input type = "text" size = 6><hyp>-</hyp><input type = "password" size = 7> ※잘못된 주민등록번호는 등록되지 않습니다.</label></td></tr>
+            <tr><td class = "index">성 별</td><td><input type = "radio" name = "sex" value = 1>남 <input type = "radio" name = "sex" value = 2>여</td></tr>
+            <tr><td class = "index">생 일</td><td><input type = "text" size = 3>년 <select name = "month"><option value = "def">월</option><option value = 1>1</option><option value = 2>2</option><option value = 3>3</option><option value = 4>4</option><option value = 5>5</option><option value = 6>6</option><option value = 7>7</option><option value = 8>8</option><option value = 9>9</option><option value = 10>10</option><option value = 11>11</option><option value = 12>12</option></select>월 <input type = "text" size = 1>일  <input type = "radio" name = "moon" value = 1 checked>양력 <input type = "radio" name = "moon" value = 2>음력</td></tr>
+            <tr><td class = "index">직업</td><td><select name = "job"><option value = "def">직업</option><option value = 1>학생</option><option value = 2>교수</option></select></td></tr>
+            <tr><td class = "index">E-mail</td><td><input type = "text"></td></tr>
+            <tr><td class = "index">전화번호</td><td><input type = "text" size = 1>-<input type = "text" size = 1>-<input type = "text" size = 1></td></tr>
+            <tr class = "hang"><td class = "additional" colspan = 2><b>추가 항목</b>(선택입력사항입니다)</td></tr>
+            <tr><td class = "intro">자기소개</td><td><label><textarea cols = 25 rows = 5>자기소개를 간단하게 써주세요</textarea> ※ 50자 이내로</label></td></tr>
+            <tr><td class = "index">홈페이지</td><td>http:// <input type = "text"></td></tr>
+            <tr><td class = "index">메일링 가입여부</td><td><input type = "radio" name = "mail" value = 1 checked>예 <input type = "radio" name = "mail" value = 2>아니오</td></tr>
+            <tr><td class = "interest">관심영역</td><td><label class = "inter"><p><input type = "checkbox" name = "inter" value = 1>연예/오락<br><input type = "checkbox" name = "inter" value = 2>비즈니스<br><input type = "checkbox" name = "inter" value = 3>여행<br></p><p><input type = "checkbox" name = "inter" value = 4>가정 &amp; 가족<br><input type = "checkbox" name = "inter" value = 5>컴퓨터 &amp; 기술<br><input type = "checkbox" name = "inter" value = 6>금융<br></p><p><input type = "checkbox" name = "inter" value = 7>쇼핑<br><input type = "checkbox" name = "inter" value = 8>음악<br><input type = "checkbox" name = "inter" value = 9>스포츠 &amp; 야외활동<br></p></label></td></tr>
+            <tr><td colspan = 2 class = "desc">회원 가입을 위해 필요한 사항들을 모두 입력하셨으면 아래 '확인' 버튼을 클릭하십시오.<br>새로 입력을 원하시면 '다시' 버튼을 클릭하시기 바랍니다.</td></tr>
+            <tr><td colspan = 2 class = "sub"><button type = "submit">확인</button><button type = "reset"> 다시</button></td></tr>
+        </table>
+    </article>
+    
+</body>
+</html>
