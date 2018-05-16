@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset ="utf-8">
+    <title>회원가입 폼</title>
+    <style>
+        body {
+            background-color : lightblue;
+            font-family: 돋움;
+        }
+        
+        g {
+            color : brown;
+        }
+        
+        table {
+            position : relative;
+            width : 400px;
+            border-collapse: collapse;
+            border-spacing : 0;
+            border : 1px solid #333;
+        }
+        
+        input {
+            color : #777;
+        }
+        
+        input:focus {
+            font-weight : bold;
+            color : #333;
+        }
+        
+        td {
+            border : 1px solid #333;
+        }
+        
+        td:not(:first-child) {
+            padding-left: 3px;
+        }
+        
+        label {
+            color : coral;
+            font-size : 0.8em;
+        }
+        
+        hyp {
+            color : black;
+        }
+        
+        .basic  {
+            height : 20px;
+            background-color : #63964b;
+            color : white;
+            font-size : 0.85em;
+        }
+        
+        
+        tr:not(.hang) {
+            height : 30px;
+            font-size : 0.9em;
+            background-color : #EEE;
+        }
+        
+        .index, .intro, .interest {
+            width : 135px;
+            font-family : 돋움체;
+            background-image : url(../media/arrow.png);
+            background-repeat : no-repeat;
+            background-position : 4px 7px;
+            text-indent : 20px;
+        }
+        
+        .intro {
+            height : 80px;
+            background-position : 4px 36px;
+        }
+        
+        .sub {
+            text-align : center;
+        }
+        
+        .sub button {
+            margin : 0 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <article>
+        <table>
+            <tr class = "hang"><td class = "basic" colspan = 2><b>회원가입 </b>(성실히 작성해주세요)</td></tr>
+            <tr><td class = "index">회원아이디</td><td><label><input type = "text" size = 15> </label></td></tr>
+            <tr><td class = "index">비밀번호</td><td><label for = "password"><input type = "password" size = 15></label></td></tr>
+            <tr><td class = "index">이 름</td><td><label><input type = "text" size = 15></label></td></tr>
+            <tr><td class = "index">E-mail</td><td><input type = "text"></td></tr>
+            <tr><td class = "index">전화번호</td><td><input type = "text" size = 1>-<input type = "text" size = 1>-<input type = "text" size = 1></td></tr>
+            <tr><td class = "intro">자기소개</td><td><label><textarea cols = 30 rows = 5 placeholder = "자기소개를 간단하게 써주세요"></textarea></label></td></tr>
+            <tr><td colspan = 2 class = "sub"><button type = "submit">가입</button><button type = "reset"> 취소</button></td></tr>
+        </table>
+    </article>
+    
+</body>
+</html>
