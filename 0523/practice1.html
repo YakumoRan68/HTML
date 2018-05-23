@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>연산</title></head>
+<body>
+    <script>
+    function getName() {
+        var ret = parseInt(prompt("값을 입력하세요", "")); //parseInt Int로 형변환
+        var multiply = ret * 2;
+        var square = ret * ret;
+        if (ret % 2 == 0) {
+            document.write(square);
+        } else if (ret % 2 == 1) {
+            document.write(multiply);
+        } else {
+            alert("숫자를 입력하세요");
+            getName();
+        }
+    }
+    getName();
+    </script>
+</body>
+</html>

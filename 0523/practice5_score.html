@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = utf-8>
+    <title>평점계산</title>
+</head>
+<body>
+    <script>
+        function doCalc(){
+            var subject = ["국어", "영어", "수학"];
+            var score = new Array(subject.length);
+            var i = 0, sum = 0;
+            while (i != subject.length) {
+                score[i] = parseInt(prompt(subject[i]+" 성적을 입력하세요"));
+                if (score[i] == NaN || score[i] == null) { //예외처리를 해보려 했으나 실패
+                    alert("다시 입력해주세요.");
+                } else {
+                    i++;
+                }
+            }
+            for (i = 0; i<subject.length; i++){
+                document.write(subject[i]+"성적 : "+score[i]+"<br>");
+                sum += score[i];
+            }
+            var avg = sum/subject.length, grade;
+            document.write("성적합계 : "+sum+"<br>성적평균 : "+avg+"<br>");
+            if (avg >= 95) {
+                grade = "A+"
+            } else if (avg >= 90) {
+                grade = "A0"
+            } else if (avg >= 85) {
+                grade = "b+"
+            } else if (avg >= 80) {
+                grade = "B0"
+            } else if (avg >= 75) {
+                grade = "C+"
+            } else if (avg >= 70) {
+                grade = "C0"
+            } else {
+                grade = "F"
+            }
+            document.write("학점 : "+grade)
+        }
+        doCalc()
+    </script>
+</body>
+</html>

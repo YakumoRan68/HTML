@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>연산</title></head>
+<body>
+    <script>
+    function operate() {
+        var a = parseInt(prompt("값을 입력하세요", "")); //int가 아닐경우 "NaN" 리턴
+        var b = parseInt(prompt("값을 입력하세요", ""));
+        var sum = a + b; var sub = a - b; var mul = a * b; var div = a / b;
+        document.write(a+" + "+b+" = "+sum+"<br>");
+        document.write(a+" - "+b+" = "+sub+"<br>");
+        document.write(a+" * "+b+" = "+mul+"<br>");
+        document.write(a+" / "+b+" = "+div+"<br>");
+    }
+    operate();
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = utf-8>
+    <title>while</title>
+</head>
+<body>
+    <script>
+        function doSum(){
+            var n = parseInt(prompt("0보다 큰 자연수를 입력하세요", ""));
+            var sum = 0, i = 0;
+            if (n > 0) {
+                while(i<=n){
+                    sum += i;
+                    i++;
+                }
+            } else {
+                alert("0보다 큰 자연수를 입력해주세요.");
+                doSum();
+            }
+            document.write(sum)
+        }
+        doSum();
+    </script>
+</body>
+</html>
