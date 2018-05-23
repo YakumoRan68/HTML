@@ -12,10 +12,10 @@
             var i = 0, sum = 0;
             while (i != subject.length) {
                 score[i] = parseInt(prompt(subject[i]+" 성적을 입력하세요"));
-                if (score[i] == NaN || score[i] == null) { //예외처리를 해보려 했으나 실패
+                if (score[i] || score[i] == 0) { //예외 설정은 이렇게 하는것이 좋다.
+                    i++; //truthy : true, {}, [], 42, -42, "foo", new Date(), Infinity, -Infinity
+                } else { //falsey : false, NaN, undefined, 0, '', "", document.all
                     alert("다시 입력해주세요.");
-                } else {
-                    i++;
                 }
             }
             for (i = 0; i<subject.length; i++){
@@ -29,7 +29,7 @@
             } else if (avg >= 90) {
                 grade = "A0"
             } else if (avg >= 85) {
-                grade = "b+"
+                grade = "B+"
             } else if (avg >= 80) {
                 grade = "B0"
             } else if (avg >= 75) {
